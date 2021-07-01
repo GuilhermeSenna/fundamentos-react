@@ -1,18 +1,19 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from 'react'
 
-import produtos from '../data/produtos'
+import produtos from '../../data/produtos'
 
-export default props =>{
+export default props => {
 
-    function getProdutosListItem(){
+    function getProdutosListItem() {
         return produtos.map(prod => {
             return <li key={prod.id}>
-                    {prod.id} - {prod.nome} -> R$ {prod.preco}
-                </li>
+                {prod.id} - {prod.nome} -> R$ {prod.preco}
+            </li>
         })
     }
 
-    return(
+    return (
         <div>
             <h2>Repetição</h2>
             <ul>
